@@ -1,0 +1,22 @@
+{
+  "name": "find-me-on-tv",
+  "version": "1.0.0",
+    "private": true,
+  "description": "NBCUniversal Hackathon Entry",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Cottrell",
+  "license": "ISC",
+  "engines": {
+    "node": "~4.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "nodemailer": "~2.2.1"
+  }  
+}
