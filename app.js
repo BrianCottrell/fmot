@@ -7,8 +7,10 @@ var app         = express();
 var nodemailer  = require('nodemailer');
 var port        = process.env.PORT || 8080;
 
+app.set('view engine', 'ejs');
+
 app.get('/', function(req, res){
-	res.status(200).send('Hello World');
+	res.status(200).render('share_page');
 })
 
 app.listen(port);
