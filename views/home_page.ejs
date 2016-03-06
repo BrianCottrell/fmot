@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Entry for the 2016 NBCUniversal Hackathon">
+        <meta name="author" content="Brian Cottrell">
+        <title>Find Me on TV!</title>
+        <style type="text/css">
+            h1{
+                font-family: arial;
+                color: blue;
+            }
+            textarea{
+                width: 960px;
+                height: 100px;
+                font-size: 18px;
+            }
+            .container{
+                text-align: center;
+            }
+            .choose{
+                width: 300px;
+                height: 200px;
+                margin: 15px;
+                font-size: 20px;
+            }
+            .icon{
+                margin-top: 30px;
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+            .block{
+                display: block;
+            }
+            .inline{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="http://i.imgur.com/z0mmj4j.png">
+            <h1>Choose a Twitter card to use as a notification</h1>
+            <div>
+                <img width="330" src="http://i.imgur.com/C4q7L85.png">
+                <img width="330" src="http://i.imgur.com/CL6eRhA.png">
+                <img width="330" src="http://i.imgur.com/Zrm3uK9.png">
+                <div>
+                    <button class="choose">Select this card if you are when broadcasting live TV to notify your users that they are currently on TV</button>
+                    <button class="choose">Select this card if you have video content available for watching or purchase on the web</button>
+                    <button class="choose">Select this card if you have recorded content that will air at a later time to notify the user of the time and channel to watch it</button>
+                </div>
+                <div>
+                    <textarea>Enter you notification message here</textarea>
+                </div>
+                <a class="message" href="/"><img class="icon" src="http://i.imgur.com/FvNDsN1.png"></a>
+                <a class="message" href="https://studio.wirewax.com/#/studio/videos"><img class="icon" src="http://i.imgur.com/PldFMLQ.png"></a>
+                <a class="message" href="/send?message=test"><img class="icon" src="http://i.imgur.com/k2djR8h.png"></a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementsByClassName('choose')[0].addEventListener('click', function(){
+                alert('You have selected the Summary Card');
+            });
+            document.getElementsByClassName('choose')[1].addEventListener('click', function(){
+                alert('You have selected the Summary Card with Large Image');
+            });
+            document.getElementsByClassName('choose')[2].addEventListener('click', function(){
+                alert('You have selected the Player Card');
+            });
+            console.log(document.getElementsByClassName('message')[0].href);
+
+        </script>
+    </body>
+</html>
