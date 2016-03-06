@@ -53,7 +53,7 @@
                     <button class="choose">Select this card if you have recorded content that will air at a later time to notify the user of the time and channel to watch it</button>
                 </div>
                 <div>
-                    <textarea>Enter you notification message here</textarea>
+                    <textarea class="notification">Enter you notification message here</textarea>
                 </div>
                 <a class="message" href="/"><img class="icon" src="http://i.imgur.com/FvNDsN1.png"></a>
                 <a class="message" href="https://studio.wirewax.com/#/studio/videos"><img class="icon" src="http://i.imgur.com/PldFMLQ.png"></a>
@@ -70,8 +70,9 @@
             document.getElementsByClassName('choose')[2].addEventListener('click', function(){
                 alert('You have selected the Player Card');
             });
-            console.log(document.getElementsByClassName('message')[0].href);
-
+            document.getElementsByClassName('notification')[0].addEventListener('keyup', function(){
+                document.getElementsByClassName('message')[2].href = "/send?message="+encodeURIComponent(document.getElementsByClassName('notification')[0].value);
+            });
         </script>
     </body>
 </html>
