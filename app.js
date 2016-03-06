@@ -64,7 +64,7 @@ app.get('/send', function(req, res){
             console.log(body);
 
             twitter.post('statuses/update', params+' http://fmot.herokuapp.com/share', function (err, data, response) {
-                console.log(data)
+                console.log('Twitter post sent');
             });
 
             var mailOptions = {
